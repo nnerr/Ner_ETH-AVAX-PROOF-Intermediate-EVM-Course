@@ -3,21 +3,21 @@ pragma solidity ^0.8.26;
 
 contract FunctionsErrors {
 
-    uint public sampleBalance = 10;
+    uint public sampleBalance = 4;
 
-    function aRequire(uint x) public pure returns (string memory) {
-        require(x >= 10, "Input must be greater than or equal to 10");
+    function xRequire(uint x) public pure returns (string memory) {
+        require(x >= 4, "Input must be greater than or equal to 4");
         return "Test Successful";
     }
 
-    function aRevert(uint x) public pure returns (string memory) {
-        if (x >= 20) {
-            revert("Input is greater than or equal to 20");
+    function xRevert(uint x) public pure returns (string memory) {
+        if (x >= 8) {
+            revert("Input is greater than or equal to 8");
         }
-        return "Input is less than 20";
+        return "Input is less than 8";
     }
 
-    function aAssert() public view returns (string memory) {
+    function xAssert() public view returns (string memory) {
         assert(sampleBalance > 0);
         return "Test Successful";
     }
