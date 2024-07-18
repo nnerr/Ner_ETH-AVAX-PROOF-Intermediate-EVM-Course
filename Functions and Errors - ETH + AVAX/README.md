@@ -1,48 +1,78 @@
-# Functions and Errors
-
+# Bank Contract
 
 ## Description
 
-This assessment required us to develop a smart contract that handles errors using three specific functions: `require()`, `revert()`, and `assert()`. These functions were implemented in the contract to demonstrate their correct functionality in theory.
+This project implements a simple smart contract for a basic banking system using Solidity. The contract allows users to deposit, withdraw, and check their balance. It handles errors using three specific functions: `require()`, `revert()`, and `assert()`. These functions demonstrate their correct usage in managing conditions and errors within the contract.
 
 ## Getting Started
 
-The smart contract was created using the Remix - Ethereum IDE. The smart contract is named
-"FunctionsErrors.sol" which can be found in the contracts folder. There it shows the functions that were required
-from us to be used in the assessment which were: require(), revert(), and assert().
+The smart contract was created using the Remix - Ethereum IDE. The smart contract is named "SimpleBank.sol" and can be found in the contracts folder. It includes the following functions:
+- `deposit()`
+- `withdraw()`
+- `checkBalance()`
 
-### Installing
+## Installing
 
-* You may use the same IDE (Remix) or VScode in order to have the program run properly as long as you have Git bash installed.
-* With having Git bash installed and running, in the terminal, pull from this GIthub repository.
-* In the terminal of VScode with Git bash running, run this command: npm install -g truffle. (This in order to compile and run the smart contracts)
+You may use the same IDE (Remix) or Visual Studio Code (VS Code) to run the program properly. Ensure you have Git Bash installed. 
 
-### Executing program
+1. Clone this GitHub repository to your local machine using Git Bash:
+   ```bash
+   git clone <repository-url>
+   ```
+2. If using VS Code, ensure you have the necessary extensions for Solidity installed.
 
-* How to run the program
-* Step-by-step bullets
-```
-- With the repository copied into your local machine and Git bash running in the terminal, type in this command: truffle develop
-- With the truffle console open, type in compile, followed by migrate
-    - If you need to remigrate in the console type: migrate --reset
-- Declare an instance of the smart contract by typing this command into the terminal: let a = await Assessment.deployed
-- You can test the contract with these commands:
-  - a.xRequire(8)
-  - a.xRequire(45)
-  - a.xRevert(3)
-  - a.xRevert(7)
-  - a.xAssert()
-```
+## Executing Program
+
+### How to run the program
+
+Step-by-step instructions:
+
+1. **Open Remix IDE**:
+   - Navigate to [Remix IDE](https://remix.ethereum.org/) in your web browser.
+
+2. **Load the Contract**:
+   - In Remix, create a new file named `SimpleBank.sol` in the contracts folder.
+   - Copy the contents of `SimpleBank.sol` from this repository into the new file.
+
+3. **Compile the Contract**:
+   - Click on the `Solidity Compiler` tab in Remix.
+   - Click `Compile SimpleBank.sol`.
+
+4. **Deploy the Contract**:
+   - Click on the `Deploy & Run Transactions` tab.
+   - Ensure the `Environment` is set to `JavaScript VM (London)`.
+   - Click `Deploy`.
+
+5. **Interact with the Contract**:
+   - After deployment, the contract will appear in the `Deployed Contracts` section.
+   - Expand the contract interface to see available functions.
+
+### Example Commands
+
+You can interact with the contract using the following commands:
+
+- **Deposit Ether**:
+  - Select the `deposit` function.
+  - Enter the amount of Ether (in wei) in the `Value` field above the function buttons (e.g., 1 ether = 1000000000000000000 wei).
+  - Click `deposit`.
+
+- **Withdraw Ether**:
+  - Select the `withdraw` function.
+  - Enter the amount of Ether (in wei) you wish to withdraw.
+  - Click `withdraw`.
+
+- **Check Balance**:
+  - Select the `checkBalance` function.
+  - Click `checkBalance` to view your balance.
 
 ## Authors
 
-Contributors names and contact info
+Contributors names and contact info:
 
 Jonner Villapando
 
 202110226@fit.edu.ph
 
-
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the LICENSE.md file for details.
